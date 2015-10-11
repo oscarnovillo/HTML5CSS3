@@ -9,9 +9,29 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .test:hover{
+                width:200px;border: 2px aqua solid;outline:2px red dotted;margin: 10px;padding: 10px;
+                text-transform: uppercase;
+                transform: rotate(20deg);
+                
+            }
+            .test{
+                width:150px;float:left;border: 2px red solid;outline:2px aqua dotted;margin: 10px;padding: 10px;
+                transition: width 1s;
+                transition-delay: 0.1s;
+                
+            }
+            .test2{
+                display:none;
+                transition: 2s all;
+            }
+
+        </style>
     </head>
     <body>
-        <div >TODO write content</div>
-        
+        <div class="test" onclick="document.getElementById('div2').style.display=''" >TODO write content</div>
+        <div class="test2" id="div2" >ESTO ES OTRO DIV</div>
+
     </body>
 </html>
