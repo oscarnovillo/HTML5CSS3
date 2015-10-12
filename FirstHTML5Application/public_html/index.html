@@ -10,31 +10,38 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            .test:hover{
-                width:200px;border: 2px aqua solid;outline:2px red dotted;margin: 10px;padding: 10px;
-                text-transform: uppercase;
-                transform: rotate(20deg);
-
-
-            }
             .test{
-                width:150px;float:left;border: 2px red solid;outline:2px aqua dotted;margin: 10px;padding: 22px;
+                width:150px;float:left;
+                border: 2px red solid;
+                outline:2px aqua dotted;
+                margin: 10px;
+                padding: 22px;
                 transition: width 1s;
-                transition-delay: 0.1s;
+                transition: transform 1s;
                 box-sizing: content-box;
                 box-shadow: black 10px 10px;
-
             }
             .test2{
-               
                 transition: 2s all;
             }
 
         </style>
+        <script>
+            function test()
+            {
+                var div1 = document.getElementById("div1");
+                div1.style.transform = ("translate(100px) ");
+                        
+                
+            }
+            
+        </script>
+            
     </head>
     <body>
-        <div class="test"  >TODO write content</div>
+        <div class="test" id="div1" >TODO write content</div>
         <div class="test2" id="div2" >ESTO ES OTRO DIV</div>
+        <input type="button" value="probando" onclick="test();"/>
 
     </body>
 </html>
