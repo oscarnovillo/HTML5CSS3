@@ -12,20 +12,37 @@ and open the template in the editor.
         <style>
             .div1 {
               background: red;
-              margin: 10px;
-              padding: 10px;  
+              margin: 0px;
+              padding: 0px;  
+              height: 100px;
+              overflow: hidden;
+              box-sizing: border-box;
+              float:left;
+            } 
+            .div1 div{
+              background: yellow;
+              margin: 0px;
+              height: 50%;
+              border: 1px dashed aqua;
+              padding: 2px;  
+              box-sizing: border-box;
             } 
             .div2{
               margin: 0px;
-              padding: 10px;
+              padding: 0px;
               border: 1px solid black;  
+              height: 300px;
+              float: right;
             }
             
         </style>
     </head>
     <body>
-        <div class="div1" style="background:yellow">TODO write content</div>
+        <div class="div1" ><div>TODO write content</div>
+            <div >OTRO MAS</div>
+        </div>
         <div class="div2" >texto nuevo</div>
-        <div class="div1" >OTRO MAS</div>
+        <div style="background: aqua;border: 1px solid black;height: 200px"> CENTRO </div>
+        
     </body>
 </html>
