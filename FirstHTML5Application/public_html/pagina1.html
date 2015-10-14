@@ -14,35 +14,44 @@ and open the template in the editor.
               background: red;
               margin: 0px;
               padding: 0px;  
-              height: 100px;
-              overflow: hidden;
-              box-sizing: border-box;
+              width: 10%;
+              height: 150px;
+              margin-bottom: 10px;
               float:left;
+              overflow: auto;
             } 
-            .div1 div{
-              background: yellow;
-              margin: 0px;
-              height: 50%;
-              border: 1px dashed aqua;
-              padding: 2px;  
-              box-sizing: border-box;
-            } 
+            .divInterno1{
+                background: pink;
+                height: 50%;
+            }
+            .divInterno2{
+                background: yellow;
+                height: 50%;
+                padding: 10px;
+            }
             .div2{
               margin: 0px;
               padding: 0px;
-              border: 1px solid black;  
-              height: 300px;
-              float: right;
+              background: yellow;
+              border: 1px solid black; 
+              float:right;
             }
             
         </style>
     </head>
     <body>
-        <div class="div1" ><div>TODO write content</div>
-            <div >OTRO MAS</div>
+       
+       
+        <div class="div1" >
+            <div class="divInterno1">
+            TODO wri te content
+            </div>
+             <div class="divInterno2" >OTRO MAS</div>
         </div>
         <div class="div2" >texto nuevo</div>
         <div style="background: aqua;border: 1px solid black;height: 200px"> CENTRO </div>
+        
+        
         
     </body>
 </html>
