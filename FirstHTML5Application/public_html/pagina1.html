@@ -9,11 +9,16 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        
         <style>
             
             body{
                 margin:0px;
                 padding:0px;
+                height: 100%;
             }
             .div1 {
                 background: red;
@@ -22,7 +27,9 @@ and open the template in the editor.
                 width: 10%;
                 height: 150px;
                 margin-bottom: 10px;
-                float:left;
+               /* float:left;*/
+                text-align: center;
+                vertical-align: middle;
                 overflow: auto;
             } 
             .divInterno1{
@@ -42,12 +49,17 @@ and open the template in the editor.
                 padding: 0px;
                 background: yellow;
                 border: 1px solid black; 
-                float:right;
+                /*float:right;*/
             }
 
         </style>
     </head>
     <body>
+        <div style="display:table;width:100%">
+            <div style="height:50vh;text-align: center;vertical-align: middle;display:table-cell"><i style="color:red" class="fa fa-camera-retro fa-5x fa-rotate-90"></i>CENTER</div>
+        <div style="height:50vh;text-align: center;vertical-align: middle;display:table-cell">CENTER</div>
+        </div>
+        
         <div class="div1" >
             <div class="divInterno1">
                 TODO wri te content
@@ -57,7 +69,12 @@ and open the template in the editor.
         <div class="div2" >texto nuevo</div>
 
 
-        <div style="background: aqua;border: 1px solid black;height: 200px"> CENTRO </div>
+        <div style="background: aqua;border: 1px solid black;box-sizing: border-box; height: 100vh">
+            <div style="position:relative;top:50%;left:50%;transform: translate(-50%,-50%);font-family: 'Amatic SC', cursive;font-size:50px ;background-color: red; 
+                 width: 50%;height: 50%">
+                <div style="width:50%;height: 50%;position:relative;top:50%;left:50%;">CENTRO</div>
+            
+            </div> </div>
 
 
 
