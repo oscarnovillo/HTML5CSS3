@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset=utf-8>
+<title>Blurry text with CSS3</title>
+<link href="/newcss.css" rel="stylesheet" type="text/css"/>
+
+
+<style type="text/css">
+p:hover{
+color:#000000;  /* this is for old browsers */
+font-size:50px;
+font-family:arial;
+text-shadow:   0 0 5px #000000,  
+5px 0 5px #000000,
+0 5px 5px #000000,
+-5px 0 5px #000000,
+0 -5px 5px #000000;
+}
+p{
+    font-size:50px;
+font-family:arial;
+}
+            
+</style>
+</head>
+<body>
+        <nav>
+            <a href="/index.html">index </a>
+            <a href="/semantica.html">semantica</a>
+            <a href="/dir/textBlur.html">textblur </a>
+            <a href="/pagina1.html">pagina1.html </a>
+        </nav> 
+<p>This text is blurred</p>
+<a href="http://10.1.203.100:8383/index.html">index absoluto</a>
+<a href="/index.html">index relativo raiz</a>
+<a href="../index.html">index relativo</a>
+
+</body>
+</html>
