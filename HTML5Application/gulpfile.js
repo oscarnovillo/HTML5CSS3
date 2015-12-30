@@ -5,7 +5,15 @@
  */
 
 var gulp = require('gulp');
+var concat = require('gulp-concat');
+var nano = require('gulp-cssnano');
+var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', function () {
-    // place code for your default task here
+gulp.task('default', ['css']);
+gulp.task('css', function () {
+    return gulp.src('./public_html/css/*.css')
+        .pipe(nano())
+    .pipe(concat('style.min.css'))
+        .pipe(gulp.dest('./public_html/dist/css'));
 });
+

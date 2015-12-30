@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-dic-2015, 19:50:44
+    Author     : oscar
+*/
+$color : #ffff00;
+$width: 100px;
+
+
+body{ 
+    background: darken($color,10%);
+}
+div{
+    background: lighten($color,10%);
+    width: $width - 50px ;
+}
+a{ 
+    font-family: Arial;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    background-image: url('example.png');
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
