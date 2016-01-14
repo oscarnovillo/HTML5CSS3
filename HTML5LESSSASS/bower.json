@@ -1,0 +1,19 @@
+{
+  "name": "HTML5Application",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "materialize": "0.97.5",
+    "bourbon": "4.2.6",
+    "lesshat": "3.0.2",
+    "Buttons": "2.0.0"
+  },
+  "devDependencies": {
+    "jquery": "2.1.4"
+  }
+}

@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-dic-2015, 13:54:16
+    Author     : oscar
+*/
+@import "../bower_components/lesshat/build/lesshat.less";
+
+
+@color : #ffffff;
+@colorl : lighten(@color,50%);
+@width : 200px; 
+body { 
+    background: darken(@color,50%);
+}
+div{
+    width: @width - 50px;
+   .border-radius(5px);
+    &:hover{
+    background-color: fadeout(@color, 50%)
+        
+    
+  }
+}
