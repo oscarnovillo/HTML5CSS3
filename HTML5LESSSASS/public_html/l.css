@@ -19,10 +19,9 @@ div {
   border-radius: 5px;
   background-clip: padding-box;
 }
+div:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 div li {
   color: #ffffff;
 }
-.jumbotron {
-  background: red;
-}
-/*# sourceMappingURL=newstyle.css.map */
