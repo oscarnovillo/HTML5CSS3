@@ -8,16 +8,17 @@ function creaTabla()
 {
     var dimensionTabla = $('#columnas').val();
     $('#tablaJuego').html('');
-    $('#tablaJuego').append("<table style='border:solid black 1px'>");
+    var tabla = "<table style='border:solid black 1px'>";
     for (var i = 0; i < dimensionTabla; i++) {
-        $('#tablaJuego').append("<tr>");
+        tabla += "<tr>";
         for (var j = 0; j < dimensionTabla; j++)
-            $('#tablaJuego').append("<td id='" + i + "-" + j + "'>hola</td>");
-        $('#tablaJuego').append("</tr>");
+        {
+            tabla +="<td id='" + i + "-" + j + "'>hola</td>";
+        }
+        tabla +="</tr>";
     }
-    $('#tablaJuego').append("</table>");
-
-
+    tabla +="</table>";
+    $('#tablaJuego').html(tabla);
 }
 
 function cambiarColumna() {
