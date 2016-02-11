@@ -24,8 +24,27 @@ and open the template in the editor.
         <input type="button" id="boton" value="crear" onclick="creaTabla();" />
         <input type="text" id="columnas" />
         <input type="button" id="botonCol" value="add" onclick="cambiarColumna();" />
+        <input type="button" id="botonCol" value="add" onclick="cambiarPantalla('tablaJuego');" />
+        <input type="button" id="botonCol" value="add" onclick="cambiarPantalla('pantalla1');" />
         
         <table style="border:1px black solid"></table>
-        <div id="tablaJuego"></div>        
+        <div id="tablaJuego">juegos</div>    
+        <div id="pantalla1">
+            <table style="width: 300px;height: 300px">
+                <tr>
+                    <td style="border:1px solid black;width: 100px;height: 100px">
+                        <div id="0-0" onclick="pichoJugador();" style="background: red;width: 100px;height: 100px"></div></td>
+                    <td style="border:1px solid black;width: 100px;height: 100px"></td>
+                    <td style="border:1px solid black;width: 100px;height: 100px"></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td>
+                </tr>
+                
+            </table>
+        </div>
     </body>
 </html>
