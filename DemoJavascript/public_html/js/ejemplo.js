@@ -42,3 +42,15 @@ function clicko()
 //alert($('#div1').css('background'));
 
 }
+
+function cambiarPantalla(idPantalla)
+{
+    $("#pantalla1").css('display','none');
+    $("#tablaJuego").css('display','none');
+    $("#"+idPantalla+"").css('display','block');
+}
+
+function pichoJugador()
+{
+    $("#0-0").html("X");
+}
