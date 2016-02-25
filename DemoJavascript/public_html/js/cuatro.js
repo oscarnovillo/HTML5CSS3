@@ -37,13 +37,31 @@ function meterFicha(columna)
             salir = true;
             fila = i;
         }
+        
     }
-    $("#"+columna+"-"+fila).css("background","red");
-    tablero[columna][fila] = "X";
+    filaFinal = fila;
+    columnaColor = columna;
     
+    window.setTimeout(ponColor,200);
     // mirar cuatro en raya
-    
 }
+var filaColor =4;
+var filaFinal = 0;
+var columnaColor = 0;
+function ponColor()
+{
+    
+    $("#"+columnaColor+"-"+filaColor).css("background","red");
+    filaColor --;
+    if (filaColor > filaFinal)
+    {
+       window.setTimeout(ponColor,200); 
+    }
+    
+     
+}
+
+
 function rellenarArray(x, y)
 {
     for (var i = 0; i < x; i++) {
