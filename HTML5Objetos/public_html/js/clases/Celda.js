@@ -9,5 +9,7 @@ function Celda()
     this.eleHtml = null;
     this.ocupada = false;
     this.color = 0;
+    this.x=0;
+    this.y=0;
 
 }
