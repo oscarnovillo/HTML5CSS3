@@ -29,7 +29,7 @@ function Tablero(x, y) {
 
         // Mirar la ultima fila sin ocupar.
 
-        // cambio la celda
+        // cambio la celda html
 
         // pongo la ultimaCeldaOcupada a esa celda.
 
