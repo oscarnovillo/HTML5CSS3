@@ -18,4 +18,10 @@ $(document).ready(function () {
 
 });
 
+function meterFicha(col)
+{
+    if (tablero.meterFicha(col))
+        alert("ha ganado");
+}
+
 

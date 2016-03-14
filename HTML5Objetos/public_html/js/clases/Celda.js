@@ -4,12 +4,25 @@
  * and open the template in the editor.
  */
 
-function Celda()
+function Celda(x, y)
 {
     this.eleHtml = null;
     this.ocupada = false;
     this.color = 0;
-    this.x=0;
-    this.y=0;
+    this.x = x;
+    this.y = y;
 
+    this.setX = function (x) {
+        this.x = x;
+    };
+    this.setY = function (y) {
+        this.y = y;
+    };
+    this.getX = function () {
+        return this.x;
+    };
+    this.getY = function () {
+        return this.y;
+    };
+    
 }
