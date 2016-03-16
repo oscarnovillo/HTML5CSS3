@@ -25,7 +25,7 @@ function Tablero(x, y) {
     this.setCelda = function (i, j, celda) {
         this.celdas[i][j].eleHtml = celda;
     };
-    this.meterFicha = function (col) {
+    this.meterFicha = function (col,turno) {
 
         // Mirar la ultima fila sin ocupar.
 
