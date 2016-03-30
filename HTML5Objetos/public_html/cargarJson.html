@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/libs/moment.js/moment.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $("#contenido").load("cacho.html");
+                $.ajax({
+                    headers: {'X-Auth-Token': '2deee83e549c4a6e9709871d0fd58a0a'},
+                    url: 'http://api.football-data.org/v1/soccerseasons/399/teams',
+                    dataType: 'json',
+                    type: 'GET'
+                }).done(function (response) {
+                    // do something with the response, e.g. isolate the id of a linked resource        
+                    $.each(response.teams, function (i,team) {
+                        $("#ligaXML").append(team.name+" <br>");
+                    });
+
+                });
+
+                $.get("http://api.openweathermap.org/data/2.5/forecast?q=Madrid,es&units=metric&mode=xml&appid=b1fc43b0ae8083ad57137a036012d56d", function (data) {
+
+                    $(data).find("forecast>time").each(function (i,hora) {
+                        $("#liga").append(moment.utc($(hora).attr("from")).format("DD-MM-YYYY HH:mm:ss") + "  " +$(hora).find("temperature").attr("value")+ "<br>");
+                    });
+                    //alert(data);
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="contenido">TODO write content</div>
+        <div id="liga"></div>
+        <div >
+            EN XML
+        </div>
+        <div id="ligaXML"></div>
+    </body>
+</html>
