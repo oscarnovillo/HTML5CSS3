@@ -1,0 +1,16 @@
+[{"name": "juan","asignaturas": [
+        { "nombre": "marcas",
+            "nota": 7},
+        { "nombre": "bd",
+            "nota": 5}
+    ]
+},
+{
+    "name": "pp",
+    "asignaturas": [
+        { "nombre": "marcas",
+            "nota": 8},
+        { "nombre": "bd",
+            "nota": 4}
+    ]
+}]
