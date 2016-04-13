@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<notas>
+    <alumnos>
+        <alumno name="juan">
+            <asignaturas>
+                <asignatura>
+                    <nombre>marcas</nombre>
+                    <nota>7</nota>
+                </asignatura>
+                 <asignatura>
+                    <nombre>bd</nombre>
+                    <nota>5</nota>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+        <alumno name="pp">
+           <asignaturas>
+                <asignatura>
+                    <nombre>marcas</nombre>
+                    <nota>5</nota>
+                </asignatura>
+                 <asignatura>
+                    <nombre>bd</nombre>
+                    <nota>8</nota>
+                </asignatura>
+            </asignaturas> 
+        </alumno>
+    </alumnos>
+    
+</notas>

@@ -20,15 +20,25 @@ and open the template in the editor.
             {
                 // coger el contenido del texto
                 var pagina = "cacho.html";
-                $("#contenido").load(pagina);
+                $.get(pagina,function (html){
+                   $("#contenido").html(html); 
+                });
+                
             }
             function cargaJson()
             {
-                $.getJSON("http://localhost:8383/HTML5Objetos/notas.json",function(alumnos){
+               /* $.get("json/notas.json",function(contenido){
+                    var alumnos = JSON.parse(contenido);
+                    
+                    
+                });
+                */
+                $.getJSON("json/notas.json",function(alumnos){
                    // $("#json").append("<table>");
+                   var tabla = "";
                     for (var i=0; i< alumnos.length; i++)
                     {
-                      $("#json").append(alumnos[i].name);
+                      tabla += alumnos[i].name;
                        
                       for (var j=0; j<alumnos[i].asignaturas.length;j++)
                       {
@@ -37,8 +47,25 @@ and open the template in the editor.
                                 +asignatura.nota+" <br>")  
                       }
                     }
-                 //   $("#json").append("</table>");
+                 $("#json").html(tabla);
                 });
+            }
+            
+            function cargaXml()
+            {
+                $.get("xml/notas.xml",function (contenido){
+                   var alumnos = $(contenido).find("alumnos>alumno"); 
+                   for(var i=0; i<alumnos.length;i++)
+                   {
+                       $("#xml").append($(alumnos[i]).attr("name"));
+                       var asignaturas = $(contenido).find("notas>alumnos>alumno>asignaturas>asignatura");
+                       for (var j=0;j<asignaturas.length;j++)
+                       {
+                           $("#xml").append($(asignaturas[j]).find("nombre").text());
+                       }
+                   }
+                   
+                }); 
             }
         </script>
     </head>
@@ -48,5 +75,8 @@ and open the template in the editor.
         <div id="contenido" >Aqui va contenido</div>
          <input type="submit" value="boton" onclick="cargaJson();"/>
         <div id="json" >Aqui va contenido</div>
+         <input type="submit" value="botonXML" onclick="cargaXml();"/>
+         <div id="xml" >Aqui va contenido</div>
+         
     </body>
 </html>
