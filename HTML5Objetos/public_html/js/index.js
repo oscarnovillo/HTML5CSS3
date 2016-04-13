@@ -6,15 +6,18 @@
 
 var tablero = null;
 $(document).ready(function () {
-    tablero = new Tablero(2, 2);
-    for (var i = 0; i < 2; i++)
+    tablero = new Tablero(6, 7);
+    
+    for (var i = 0; i < 6; i++)
     {
 
-        for (var j = 0; j < 2; j++)
+        for (var j = 0; j < 7; j++)
         {
             tablero.setCelda(i, j, i + "-" + j);
         }
     }
+
+
 
 });
 
