@@ -38,43 +38,72 @@ and open the template in the editor.
 
                 $.getJSON()
 
-                $.get("http://api.openweathermap.org/data/2.5/forecast?q=Madrid,es&units=metric&mode=xml&appid=b1fc43b0ae8083ad57137a036012d56d", 
-                function (data) {
+                $.get("http://api.openweathermap.org/data/2.5/forecast?q=Madrid,es&units=metric&mode=xml&appid=b1fc43b0ae8083ad57137a036012d56d",
+                        function (data) {
 
-                    $(data).find("forecast>time").each(
-                      function (i, hora) {
-                        $("#liga").append(moment.utc($(hora).attr("from")).format("DD-MM-YYYY HH:mm:ss") + "  " + $(hora).find("temperature").attr("value") + "<br>");
+                            $(data).find("forecast>time").each(
+                                    function (i, hora) {
+                                        $("#liga").append(moment.utc($(hora).attr("from")).format("DD-MM-YYYY HH:mm:ss") + "  " + $(hora).find("temperature").attr("value") + "<br>");
+                                    });
+                            //alert(data);
+                        });
+
+//http://estaticos.marca.com/rss/portada.xml
+//http://estaticos.elmundo.es/elmundo/rss/portada.xml
+                $.get("http://quevedo1dam.azurewebsites.net/test.php?url=http://estaticos.marca.com/rss/portada.xml", function (data) {
+                    $("#RSS").append($(data).find("channel>title").text());
+                    var items = $(data).find("item");
+                    items.sort(function (a, b) {
+
+                        // convert to integers from strings
+                        a = moment($(a).find("pubDate").text(), "ddd, DD MMM YYYY HH:mm:ss ");
+                        b = moment($(b).find("pubDate").text(), "ddd, DD MMM YYYY HH:mm:ss ")
+
+                        // compare
+                        if (a > b) {
+                            return  -1;
+                        } else if (a < b) {
+                            return 1;
+                        } else {
+                            return 0;
+                        }
                     });
-                    //alert(data);
+
+
+                    $.each(items, function (i, item) {
+                        $("#RSS").append("<br>");
+                        $("#RSS").append($(item).find('>title').text());
+        $("#RSS").append($(item).find('>description').text());                
+        $("#RSS").append("<img src='" + $(item).find('thumbnail').attr("url") + "' />");
+                        $("#RSS").append(moment($(item).find("pubDate").text(), "ddd, DD MMM YYYY HH:mm:ss ").format("DD-MM-YYYY HH:mm:ss"));
+
+
+                    });
+
                 });
-      
-     $.get("http://quevedo1dam.azurewebsites.net/test.php?url=http://estaticos.elmundo.es/elmundo/rss/portada.xml",function (data){
-          $("#RSS").append($(data).find("channel>title").text());
-         
-     }); 
-     
-     
- /*    
-$.ajax({
-  url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + 
-          encodeURIComponent('http://estaticos.marca.com/rss/futbol_1adivision.xml'),
-  dataType : 'json',
-  success  : function (data) {
-    if (data.responseData.feed && data.responseData.feed.entries) {
-      $.each(data.responseData.feed.entries, function (i, e) {
-        $("#RSS").append("------------------------");
-        $("#RSS").append("title      : " + e.title);
-        $("#RSS").append("author     : " + e.author);
-        $("#RSS").append("description: " + e.description);
-      });
-    }
-  }
-});
-   */             
+
+
+                /*    
+                 $.ajax({
+                 url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + 
+                 encodeURIComponent('http://estaticos.marca.com/rss/futbol_1adivision.xml'),
+                 dataType : 'json',
+                 success  : function (data) {
+                 if (data.responseData.feed && data.responseData.feed.entries) {
+                 $.each(data.responseData.feed.entries, function (i, e) {
+                 $("#RSS").append("------------------------");
+                 $("#RSS").append("title      : " + e.title);
+                 $("#RSS").append("author     : " + e.author);
+                 $("#RSS").append("description: " + e.description);
+                 });
+                 }
+                 }
+                 });
+                 */
 
 
 
-               
+
             });
 
         </script>
@@ -86,6 +115,6 @@ $.ajax({
             EN XML
         </div>
         <div id="ligaXML"></div>
-         <div id="RSS"></div>
+        <div id="RSS"></div>
     </body>
 </html>
