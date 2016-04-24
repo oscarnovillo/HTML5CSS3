@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23-abr-2016, 8:54:11
+    Author     : oscar
+*/
+@import "materialize.scss";
+
+body{
+    background-color: #ffcc99;
+    color: color("red", "darken-2");
+}
+h1,h2{
+    text-align: center;
+}
+#jugadorActual{
+   @extend h3;
+   color: color("red", "darken-4");
+   
+}
+.textJugador{
+    @extend #jugadorActual;
+}
+
+#tablaJuego {
+    @extend .deep-orange.lighten-2;
+    table {
+        width: 100%;
+        height: 100%;
+        td{
+            @extend .light;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            div{
+                background-size: 100px 100px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+#tablaRecords{
+    @extend .deep-orange.lighten-2;
+    table {
+        width: 100%;
+        height: 100%;
+        tr>th{
+            @extend h4;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+        tr>td:first-child {
+           background-color: color("deep-orange","lighten-3");
+           color: color("red", "darken-4");
+           @extend h4;
+           text-align: left;
+           padding-left: 20px;
+           width: 100px;
+        }
+        td{
+            @extend .light;
+            @extend h5;
+            border: 2px solid black;
+            width: 20px;
+            height: 100px;
+            text-align: center;
+        }
+    }
+    
+}
+

@@ -8,4 +8,4 @@
 var DIV_PANTALLA_LOGIN = "pantallaLogin";
 var DIV_PANTALLA_JUEGO = "pantallaJuego";
 var DIV_TABLA_JUEGO = "tablaJuego";
-
+var DIV_PANTALLA_RECORDS = "pantallaRecords";
