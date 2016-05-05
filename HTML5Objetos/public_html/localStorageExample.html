@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                var guardado  = recuperarArray();
+                if (guardado.length > 0) {
+                    alert(guardado[0]);
+                }
+
+            });
+            var array = new Array();
+            function recuperarArray()
+            {
+                var guardar = localStorage.getItem("prueba");
+                if (guardar == null)
+                    guardar = new Array();
+                else
+                    guardar = JSON.parse(localStorage.getItem("prueba"));
+                
+                return guardar;
+            }
+            function guarda()
+            {
+
+                var guardar = recuperarArray();
+                guardar[guardar.length] = $("#text").val();
+                localStorage.setItem("prueba", JSON.stringify(guardar));
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <div>TODO write content</div>
+        <input type="text" id="text"/>
+        <input type="button" onclick="guarda()"/>
+    </body>
+</html>

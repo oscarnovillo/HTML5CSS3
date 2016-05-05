@@ -28,6 +28,7 @@ and open the template in the editor.
                     url: 'http://api.football-data.org/v1/soccerseasons/399/teams',
                     dataType: 'json',
                     type: 'GET'
+                     
                 }).done(function (response) {
                     // do something with the response, e.g. isolate the id of a linked resource        
                     $.each(response.teams, function (i, team) {
@@ -73,8 +74,8 @@ and open the template in the editor.
                     $.each(items, function (i, item) {
                         $("#RSS").append("<br>");
                         $("#RSS").append($(item).find('>title').text());
-        $("#RSS").append($(item).find('>description').text());                
-        $("#RSS").append("<img src='" + $(item).find('thumbnail').attr("url") + "' />");
+                        $("#RSS").append($(item).find('>description').text());
+                        $("#RSS").append("<img src='" + $(item).find('thumbnail').attr("url") + "' />");
                         $("#RSS").append(moment($(item).find("pubDate").text(), "ddd, DD MMM YYYY HH:mm:ss ").format("DD-MM-YYYY HH:mm:ss"));
 
 
