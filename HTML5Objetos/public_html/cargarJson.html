@@ -44,7 +44,8 @@ and open the template in the editor.
 
                             $(data).find("forecast>time").each(
                                     function (i, hora) {
-                                        $("#liga").append(moment.utc($(hora).attr("from")).format("DD-MM-YYYY HH:mm:ss") + "  " + $(hora).find("temperature").attr("value") + "<br>");
+                                        $("#liga").append("<div onclick='alert(\""+
+                                moment.utc($(hora).attr("from")).format("DD-MM-YYYY")+"\")' > TEXTO </div>");
                                     });
                             //alert(data);
                         });
@@ -57,7 +58,8 @@ and open the template in the editor.
                     items.sort(function (a, b) {
 
                         // convert to integers from strings
-                        a = moment($(a).find("pubDate").text(), "ddd, DD MMM YYYY HH:mm:ss ");
+                        a = moment($(a).find("pubDate").text(),
+                        "ddd, DD MMM YYYY HH:mm:ss ");
                         b = moment($(b).find("pubDate").text(), "ddd, DD MMM YYYY HH:mm:ss ")
 
                         // compare
