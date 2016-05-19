@@ -13,18 +13,27 @@ and open the template in the editor.
    
     <script>
             $(document).ready(function () {
+                var parametros = new Object();
+                parametros.idClient = "WEB.SERV.oscar.novillo@gmail.com";
+                parametros.passKey= "0927E7EE-2496-47D4-AFC0-57FD763AD449";
+                parametros.SelectedDate="19/05/2016";
+                parametros.Lines= "145";
             $.ajax({
-                    data: {"idClient": "WEB.SERV.oscar.novillo@gmail.com",
+                    data: parametros,
+                    /*{"idClient": "WEB.SERV.oscar.novillo@gmail.com",
                         "passKey": "0927E7EE-2496-47D4-AFC0-57FD763AD449",
                     "SelectedDate":"16/05/2016",
-                "Lines": "145"},
+                "Lines": "145"},*/
                     url: 'https://openbus.emtmadrid.es:9443/emt-proxy-server/last/bus/GetRouteLines.php',
                     dataType: 'json',
                     type: 'POST'
                      
                 }).done(function (response) {
-                    // do something with the response, e.g. isolate the id of a linked resource        
-                    $("#content").append(response.resultCode + " <br>");
+                    // do something with the response, e.g. isolate the id of a linked resource     
+                    $.each(response.resultValues,function(i,parada){
+                        $("#content").append(parada.name + " "+parada.node+" <br>");
+                    });
+                    
 
                 });
             });
