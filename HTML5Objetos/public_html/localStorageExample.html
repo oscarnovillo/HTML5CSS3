@@ -33,8 +33,17 @@ and open the template in the editor.
             {
                 var ciudades = recuperarCiudades();
                 var optionCiudades = "";
+                $(ciudades).each(function (i,ciudad){
+                   
+                   optionCiudades += "<option>" + ciudad
+                           + "</option>"; 
+                    
+                });
+                    
+                
                 for (var i = 0; i < ciudades.length; i++)
                 {
+                    var ciudad = ciudades[i];
                     optionCiudades += "<option>" + ciudades[i] + "</option>";
                 }
                 $("#ciudades").html(optionCiudades);
