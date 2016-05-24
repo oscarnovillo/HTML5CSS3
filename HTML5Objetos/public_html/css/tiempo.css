@@ -6740,6 +6740,9 @@ button.close {
   background-color: red;
   color: white;
 }
+.form-group {
+  margin-bottom: 0px;
+}
 #dias8,
 #dias16 {
   padding: 0px;
@@ -6749,5 +6752,8 @@ button.close {
   font-size: smaller;
   border: 1px solid black;
   width: 12%;
+}
+#cabeceraCiudad {
+  text-align: center;
 }
 /*# sourceMappingURL=tiempo.css.map */
