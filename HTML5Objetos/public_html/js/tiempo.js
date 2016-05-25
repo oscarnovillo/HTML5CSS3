@@ -62,9 +62,9 @@ function cargarCiudad() {
 
 function verDias(dias)
 {
-    $("#dias8").css('display', 'none');
-    $("#dias16").css('display', 'none');
-    $("#dias" + dias).css('display', 'block');
+    $("#dias8").hide();
+    $("#dias16").hide();
+    $("#dias" + dias).show();
 }
 
 function verHoras(dia)
