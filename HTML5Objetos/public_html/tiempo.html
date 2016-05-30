@@ -13,10 +13,25 @@ and open the template in the editor.
         <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
         <script src="js/libs/moment.js/moment.min.js" type="text/javascript"></script>
         <script src="js/tiempo.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+               $("#opcion").append("<option value='valor nuevo'>nuevo</option>"); 
+               $("#opcion").val("valor nuevo");
+            }
+                    );
+            function test()
+            {
+                alert($("#opcion").val());
+            }
+            </script>
     </head>
     <body>
         <div class="container-fluid">
-
+            <select id="opcion"  size='4' onchange="test();" >
+                <option value="valo" > texto</option>
+                <option value="valo1" > texto1</option>
+                <option value="valo2" > texto2</option>
+            </select>
             <form class="form-horizontal hueco" role="form">
 
                     <div class="form-group">

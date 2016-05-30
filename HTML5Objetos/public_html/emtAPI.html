@@ -20,10 +20,6 @@ and open the template in the editor.
                 parametros.Lines= "145";
             $.ajax({
                     data: parametros,
-                    /*{"idClient": "WEB.SERV.oscar.novillo@gmail.com",
-                        "passKey": "0927E7EE-2496-47D4-AFC0-57FD763AD449",
-                    "SelectedDate":"16/05/2016",
-                "Lines": "145"},*/
                     url: 'https://openbus.emtmadrid.es:9443/emt-proxy-server/last/bus/GetRouteLines.php',
                     dataType: 'json',
                     type: 'POST'
