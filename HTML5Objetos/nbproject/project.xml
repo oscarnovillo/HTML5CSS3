@@ -11,6 +11,57 @@
                 <file localPath="public_html/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
                 <file localPath="public_html/js/libs/jquery/jquery.min.map" path="jquery.min.map"/>
             </library>
+            <library name="materialize" version="0.97.6">
+                <file localPath="public_html/js/libs/materialize/css/materialize.css" path="css/materialize.css"/>
+                <file localPath="public_html/js/libs/materialize/css/materialize.min.css" path="css/materialize.min.css"/>
+                <file localPath="public_html/js/libs/materialize/font/material-design-icons/Material-Design-Icons.eot" path="font/material-design-icons/Material-Design-Icons.eot"/>
+                <file localPath="public_html/js/libs/materialize/font/material-design-icons/Material-Design-Icons.svg" path="font/material-design-icons/Material-Design-Icons.svg"/>
+                <file localPath="public_html/js/libs/materialize/font/material-design-icons/Material-Design-Icons.ttf" path="font/material-design-icons/Material-Design-Icons.ttf"/>
+                <file localPath="public_html/js/libs/materialize/font/material-design-icons/Material-Design-Icons.woff" path="font/material-design-icons/Material-Design-Icons.woff"/>
+                <file localPath="public_html/js/libs/materialize/font/material-design-icons/Material-Design-Icons.woff2" path="font/material-design-icons/Material-Design-Icons.woff2"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Bold.eot" path="font/roboto/Roboto-Bold.eot"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Bold.ttf" path="font/roboto/Roboto-Bold.ttf"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Bold.woff" path="font/roboto/Roboto-Bold.woff"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Bold.woff2" path="font/roboto/Roboto-Bold.woff2"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Light.eot" path="font/roboto/Roboto-Light.eot"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Light.ttf" path="font/roboto/Roboto-Light.ttf"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Light.woff" path="font/roboto/Roboto-Light.woff"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Light.woff2" path="font/roboto/Roboto-Light.woff2"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Medium.eot" path="font/roboto/Roboto-Medium.eot"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Medium.ttf" path="font/roboto/Roboto-Medium.ttf"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Medium.woff" path="font/roboto/Roboto-Medium.woff"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Medium.woff2" path="font/roboto/Roboto-Medium.woff2"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Regular.eot" path="font/roboto/Roboto-Regular.eot"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Regular.ttf" path="font/roboto/Roboto-Regular.ttf"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Regular.woff" path="font/roboto/Roboto-Regular.woff"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Regular.woff2" path="font/roboto/Roboto-Regular.woff2"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Thin.eot" path="font/roboto/Roboto-Thin.eot"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Thin.ttf" path="font/roboto/Roboto-Thin.ttf"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Thin.woff" path="font/roboto/Roboto-Thin.woff"/>
+                <file localPath="public_html/js/libs/materialize/font/roboto/Roboto-Thin.woff2" path="font/roboto/Roboto-Thin.woff2"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Bold.eot" path="fonts/roboto/Roboto-Bold.eot"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Bold.ttf" path="fonts/roboto/Roboto-Bold.ttf"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Bold.woff" path="fonts/roboto/Roboto-Bold.woff"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Bold.woff2" path="fonts/roboto/Roboto-Bold.woff2"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Light.eot" path="fonts/roboto/Roboto-Light.eot"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Light.ttf" path="fonts/roboto/Roboto-Light.ttf"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Light.woff" path="fonts/roboto/Roboto-Light.woff"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Light.woff2" path="fonts/roboto/Roboto-Light.woff2"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Medium.eot" path="fonts/roboto/Roboto-Medium.eot"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Medium.ttf" path="fonts/roboto/Roboto-Medium.ttf"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Medium.woff" path="fonts/roboto/Roboto-Medium.woff"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Medium.woff2" path="fonts/roboto/Roboto-Medium.woff2"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Regular.eot" path="fonts/roboto/Roboto-Regular.eot"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Regular.ttf" path="fonts/roboto/Roboto-Regular.ttf"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Regular.woff" path="fonts/roboto/Roboto-Regular.woff"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Regular.woff2" path="fonts/roboto/Roboto-Regular.woff2"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Thin.eot" path="fonts/roboto/Roboto-Thin.eot"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Thin.ttf" path="fonts/roboto/Roboto-Thin.ttf"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Thin.woff" path="fonts/roboto/Roboto-Thin.woff"/>
+                <file localPath="public_html/js/libs/materialize/fonts/roboto/Roboto-Thin.woff2" path="fonts/roboto/Roboto-Thin.woff2"/>
+                <file localPath="public_html/js/libs/materialize/js/materialize.js" path="js/materialize.js"/>
+                <file localPath="public_html/js/libs/materialize/js/materialize.min.js" path="js/materialize.min.js"/>
+            </library>
         </libraries>
     </configuration>
 </project>
